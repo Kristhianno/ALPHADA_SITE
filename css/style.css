@@ -16,7 +16,7 @@
   --shadow: 0 10px 30px rgba(13,15,18,0.08);
   --shadow-lg: 0 20px 50px rgba(13,15,18,0.14);
   --ease: cubic-bezier(.4,0,.2,1);
-  --font-heading: 'Poppins', sans-serif;
+  --font-heading: 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
 }
 
@@ -138,9 +138,9 @@ h3{ font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
   position: fixed;
   top:0; left:0; right:0;
   z-index: 999;
-  background: rgba(255,255,255,0.85);
+  background: rgba(13,15,18,0.85);
   backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(13,15,18,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   transition: box-shadow .25s ease;
 }
 .header-inner{
@@ -158,10 +158,12 @@ h3{ font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
 .nav-link{
   font-weight: 500;
   font-size: 0.95rem;
-  color: var(--black-soft);
+  color: var(--gray-light);
   position: relative;
   padding: 4px 0;
+  transition: color .2s ease;
 }
+.nav-link:hover{ color: #fff; }
 .nav-link::after{
   content:'';
   position:absolute;
@@ -185,7 +187,7 @@ h3{ font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
 }
 .menu-toggle span{
   width: 24px; height: 2px;
-  background: var(--black);
+  background: #fff;
   border-radius: 2px;
 }
 
@@ -529,7 +531,7 @@ h3{ font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
   .nav{
     position: fixed;
     top: 68px; left:0; right:0;
-    background: var(--white);
+    background: var(--black);
     flex-direction: column;
     align-items:center;
     padding: 24px 0;
@@ -537,7 +539,7 @@ h3{ font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
     transform: translateY(-150%);
     opacity: 0;
     transition: all .3s ease;
-    border-bottom: 1px solid rgba(13,15,18,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
   }
   .nav.open{ transform: translateY(0); opacity:1; }
   .menu-toggle{ display:flex; }
