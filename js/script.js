@@ -23,20 +23,6 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Tooltip flutuante do WhatsApp
-const whatsTooltip = document.getElementById('whatsTooltip');
-const whatsTooltipClose = document.getElementById('whatsTooltipClose');
-if (whatsTooltip && !sessionStorage.getItem('whatsTooltipDismissed')) {
-  setTimeout(() => whatsTooltip.classList.add('show'), 3000);
-}
-if (whatsTooltipClose) {
-  whatsTooltipClose.addEventListener('click', (e) => {
-    e.preventDefault();
-    whatsTooltip.classList.remove('show');
-    sessionStorage.setItem('whatsTooltipDismissed', '1');
-  });
-}
-
 // Ano automático no rodapé
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
